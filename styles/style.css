@@ -14,6 +14,13 @@
   margin: 20px 0;
   cursor: pointer;
 }
+.description {
+  color: #6c6060;
+}
+.title {
+  font-size: 2.8rem;
+  color: #967474;
+}
 /* header section styles */
 header {
   background-color: #faebd7;
@@ -45,37 +52,91 @@ nav ul > li a {
   text-align: center;
   margin: 0 auto;
 }
-.banner-title {
-  font-size: 2.8rem;
-  color: #111010;
-}
-.banner-description {
-  color: #6c6060;
-}
 .banner img {
   width: 100%;
 }
+/* main section styles  */
+main {
+  max-width: 1440px;
+  margin: 50px auto;
+}
+.teams-container {
+  display: flex;
+  column-gap: 3em;
+  align-items: center;
+}
+.teams-img-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+}
+.quick-list {
+  color: rgb(176, 206, 206);
+  font-weight: 600;
+}
+.text-feature {
+  color: rgb(142, 113, 113);
+}
+.teams-content-description {
+  font-weight: 300;
+}
+/* facts section styles */
+.facts .facts-card-container {
+  display: flex;
+  justify-content: space-between;
+}
+.facts .facts-card-container .card {
+  margin-top: 3rem;
+  text-align: center;
+  border: 1px solid sandybrown;
+  padding: 1rem 1.5rem;
+  border-radius: 1em;
+}
 /* media quere for responsive */
-/* for mobile divices */
+/***************************************** for mobile divices ********************************/
 @media screen and (max-width: 576px) {
   header {
     padding: 10px;
     margin: 0 auto;
   }
-  nav {
+  nav,
+  nav ul,
+  .facts .facts-card-container {
     flex-direction: column;
   }
-  nav ul {
+  .teams-container {
+    display: flex;
     flex-direction: column;
+    column-gap: 3em;
+    align-items: center;
+  }
+  .teams-content-container {
+    text-align: center;
+  }
+  .teams-img-container {
+    display: flex;
   }
 }
-/* for tablets */
+/*********************************************for tablets**********************************/
 @media screen and (min-width: 577px) and (max-width: 960px) {
   header {
     padding: 10px;
     margin: 0 auto;
   }
-  /* nav {
+  .teams-container {
+    display: flex;
     flex-direction: column;
-  } */
+    column-gap: 3em;
+    align-items: center;
+  }
+  .teams-img-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    margin: 0 auto;
+  }
+  .teams-content-container {
+    text-align: center;
+    padding: 2rem;
+  }
 }
